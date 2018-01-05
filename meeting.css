@@ -1,0 +1,48 @@
+.meeting {
+
+}
+
+.meeting__header {
+
+}
+
+.meeting__first-row {
+  display: flex;
+}
+
+.meeting__title {
+  display: inline-block;
+  width: 420px;
+  margin-right: 32px;
+}
+
+.meeting__date {
+  width: 238px;
+  display: inline-block;
+  margin-right: 16px;
+}
+
+.meeting__start {
+  width: 72px;
+  display: inline-block;
+}
+
+.meeting__end {
+  width: 72px;
+  display: inline-block;
+}
+
+.meeting__dash {
+  display: inline-block;
+  margin: auto 4px;
+  font-family: Arial;
+  position: relative;
+  top: 14px;
+
+  width: 14px;
+  overflow: hidden;
+}
+
+.meeting__dash::after {
+  content: "—";
+}
