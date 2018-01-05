@@ -2,7 +2,6 @@
 <html>
 <head>
   <link rel="stylesheet" href="./textbox.css" />
-  <link rel="stylesheet" href="./block.css" />
   <link rel="stylesheet" href="./header.css" />
   <link rel="stylesheet" href="./meeting.css" />
   <script src="./textbox.js"></script>
@@ -43,43 +42,35 @@
 
       <div class="meeting__first-row">
         <div class="meeting__title">
-          <div class="block">
-            <h2 class="block__title">Тема</h2>
+          <h2 class="meeting__block-title">Тема</h2>
 
-            <div class="textbox" id="theme">
-              <input type="text" class="textbox__input" placeholder="О чем будем говорить?" value="qwerty"/>
-            </div>
+          <div class="textbox" id="theme">
+            <input type="text" class="textbox__input" placeholder="О чем будем говорить?" value="qwerty"/>
           </div>
         </div>
 
         <div class="meeting__date">
-          <div class="block">
-            <h2 class="block__title">Дата</h2>
+          <h2 class="meeting__block-title">Дата</h2>
 
-            <div class="textbox textbox--with-icon">
-              <input type="text" class="textbox__input" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
-              <div class="textbox__icon" data-type="calendar"></div>
-            </div>
+          <div class="textbox textbox--with-icon">
+            <input type="text" class="textbox__input" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+            <div class="textbox__icon" data-type="calendar"></div>
           </div>
         </div>
 
         <div class="meeting__start">
-          <div class="block">
-            <h2 class="block__title">Начало</h2>
-            <div class="textbox" id="start">
-              <input type="text" class="textbox__input" placeholder="16:00" />
-            </div>
+          <h2 class="meeting__block-title">Начало</h2>
+          <div class="textbox" id="start">
+            <input type="text" class="textbox__input" placeholder="16:00" />
           </div>
         </div>
 
         <div class="meeting__dash"></div>
 
         <div class="meeting__end">
-          <div class="block">
-            <h2 class="block__title">Конец</h2>
-            <div class="textbox" id="end">
-              <input type="text" class="textbox__input" placeholder="17:00" />
-            </div>
+          <h2 class="meeting__block-title">Конец</h2>
+          <div class="textbox" id="end">
+            <input type="text" class="textbox__input" placeholder="17:00" />
           </div>
         </div>
       </div>

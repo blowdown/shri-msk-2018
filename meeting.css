@@ -6,6 +6,12 @@
 
 }
 
+.meeting__block-title {
+  font-size: 13px;
+  margin-bottom: 4px;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
 .meeting__first-row {
   display: flex;
 }

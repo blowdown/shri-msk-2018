@@ -14,7 +14,8 @@
   height: 38px;
   border: 2px solid #E9ECEF;
   border-radius: 4px;
-  
+
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
   color: #000;
   font-size: 13px;
   letter-spacing: 0.47px;
@@ -36,15 +37,15 @@
   position: absolute;
   right: 10px;
   bottom: 11px;
-  
+
   width: 16px;
   height: 16px;
 
   cursor: pointer;
-  
+
   opacity: 0.3;
   transition: opacity 200ms ease-in-out;
-  
+
 }
 
 .textbox__icon:hover {
