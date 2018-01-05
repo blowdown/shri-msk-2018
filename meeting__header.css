@@ -1,17 +1,17 @@
-.header {
+.meeting__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.header__text {
+.meeting__header-text {
   font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
   font-size: 20px;
   color: #000000;
   letter-spacing: 0;
 }
 
-.header__close {
+.meeting__header-close {
   width: 24px;
   height: 24px;
   background-color: #E9ECEF;
@@ -22,15 +22,15 @@
   vertical-align: middle;
 }
 
-.header__close:focus {
+.meeting__header-close:focus {
   outline: none;
 }
 
-.header__close::before {
+.meeting__header-close::before {
   background-image: url(https://yandex-shri-msk-2018.github.io/entrance-task-2/desktop-guide/assets/close.svg);
   background-repeat: no-repeat;
   background-position: center center;
-  
+
   width: 24px;
   height: 24px;
   content: "";
@@ -38,7 +38,8 @@
   top: 0;
   left: 0;
 }
-.header__close:focus::before,
-.header__close:hover::before {
+
+.meeting__header-close:focus::before,
+.meeting__header-close:hover::before {
   filter: brightness(0.5);
 }
