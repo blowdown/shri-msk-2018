@@ -1,0 +1,44 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__text {
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-size: 20px;
+  color: #000000;
+  letter-spacing: 0;
+}
+
+.header__close {
+  width: 24px;
+  height: 24px;
+  background-color: #E9ECEF;
+  border: 0;
+  border-radius: 100%;
+  cursor: pointer;
+  position: relative;
+  vertical-align: middle;
+}
+
+.header__close:focus {
+  outline: none;
+}
+
+.header__close::before {
+  background-image: url(https://yandex-shri-msk-2018.github.io/entrance-task-2/desktop-guide/assets/close.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  
+  width: 24px;
+  height: 24px;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.header__close:focus::before,
+.header__close:hover::before {
+  filter: brightness(0.5);
+}

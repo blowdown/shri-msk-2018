@@ -1,0 +1,66 @@
+.textbox {
+  position: relative;
+  display: block;
+}
+
+.textbox--with-icon > .textbox__input {
+  padding-right: 30px;
+}
+
+.textbox__input {
+  box-sizing: border-box;
+  line-height: 38px;
+  width: 100%;
+  height: 38px;
+  border: 2px solid #E9ECEF;
+  border-radius: 4px;
+  
+  color: #000;
+  font-size: 13px;
+  letter-spacing: 0.47px;
+  padding: 0 10px;
+}
+
+.textbox__input::placeholder {
+  color: #858E98;
+}
+
+
+.textbox__input:focus {
+  outline: none;
+  border-color: #007DFF;
+}
+
+.textbox__icon {
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  bottom: 11px;
+  
+  width: 16px;
+  height: 16px;
+
+  cursor: pointer;
+  
+  opacity: 0.3;
+  transition: opacity 200ms ease-in-out;
+  
+}
+
+.textbox__icon:hover {
+  opacity: 1;
+}
+
+.textbox__icon[data-type="calendar"] {
+  background-image: url(https://yandex-shri-msk-2018.github.io/entrance-task-2/desktop-guide/preview/page-1-assets.png);
+  background-position: -138.5px -74.5px;
+  background-repeat: no-repeat;
+  background-size: 213px auto;
+}
+
+.textbox__icon[data-type="clear"] {
+  background-image: url(https://yandex-shri-msk-2018.github.io/entrance-task-2/desktop-guide/preview/page-1-assets.png);
+  background-position: -78.5px -74.5px;
+  background-repeat: no-repeat;
+  background-size: 213px auto;
+}

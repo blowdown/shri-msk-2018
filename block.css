@@ -1,0 +1,9 @@
+.block {
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.block__title {
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
