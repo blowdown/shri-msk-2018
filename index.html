@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./footer.css">
   <link rel="stylesheet" href="./button.css">
   <link rel="stylesheet" href="./room.css">
+  <link rel="stylesheet" href="./member.css">
   <script src="./textbox.js"></script>
 
   <style>
@@ -100,8 +101,26 @@
           <div class="meeting__members">
             <h2 class="meeting__block-title">Участники</h2>
 
-            <div class="textbox">
-              <input type="text" class="textbox__input" placeholder="Например, Тор Одинович"/>
+            <div class="meeting__members-dropdown">
+              <div class="textbox">
+                <input type="text" class="textbox__input" placeholder="Например, Тор Одинович"/>
+              </div>
+            </div>
+
+            <div class="member">
+              <div class="member__avatar" style="background-image: url(https://randomuser.me/api/portraits/women/56.jpg);"></div>
+              <div class="member__name">Томас Андерсон</div>
+              <button class="member__remove"></button>
+            </div>
+            <div class="member">
+              <div class="member__avatar" style="background-image: url(https://randomuser.me/api/portraits/men/42.jpg);"></div>
+              <div class="member__name">Лекс Лютер</div>
+              <button class="member__remove"></button>
+            </div>
+            <div class="member">
+              <div class="member__avatar" style="background-image: url(https://randomuser.me/api/portraits/men/17.jpg);"></div>
+              <div class="member__name">Дарт Вейдер</div>
+              <button class="member__remove"></button>
             </div>
           </div>
 
