@@ -1,0 +1,40 @@
+.room {
+  display: flex;
+  background: #E9ECEF;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 8px;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-size: 13px;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 17px;
+}
+
+.room.room--selected {
+  padding-right: 12px;
+  background: #007DFF;
+  color: #FFFFFF;
+}
+
+.room__cancel {
+  background-image: url(https://yandex-shri-msk-2018.github.io/entrance-task-2/desktop-guide/assets/close.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  width: 16px;
+  height: 16px;
+  margin-left: auto;
+  filter: brightness(1000%);
+
+  cursor: pointer;
+  border: 0;
+  background-color: transparent;
+}
+
+.room__time {
+  font-weight: bold;
+  margin-right: 16px;
+}
+
+
