@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="./room.css">
   <link rel="stylesheet" href="./member.css">
   <link rel="stylesheet" href="./modal.css">
+  <link rel="stylesheet" href="./dropdown.css">
+  <link rel="stylesheet" href="./members-dropdown.css">
   <script src="./textbox.js"></script>
 
   <style>
@@ -107,8 +109,41 @@
             <h2 class="meeting__block-title">Участники</h2>
 
             <div class="meeting__members-dropdown">
-              <div class="textbox">
-                <input type="text" class="textbox__input" placeholder="Например, Тор Одинович"/>
+              <div class="members-dropdown">
+
+                  <div class="dropdown" id="dropdown">
+                      <div class="textbox">
+                        <input type="text" class="textbox__input" placeholder="Например, Тор Одинович"/>
+                      </div>
+
+                      <div class="dropdown__panel">
+                        <div class="dropdown__element">
+                          <div class="members-dropdown__element">
+                            <div class="members-dropdown__avatar" style="background-image: url(https://randomuser.me/api/portraits/women/56.jpg);"></div>
+                            <div class="members-dropdown__name">Лекс Лютер</div>
+                            <div class="members-dropdown__floor">· 7 этаж</div>
+                          </div>
+                        </div>
+                        <div class="dropdown__element dropdown__element--selected">
+                          <div class="members-dropdown__element members-dropdown__element--selected">
+                            <div class="members-dropdown__avatar" style="background-image: url(https://randomuser.me/api/portraits/women/56.jpg);"></div>
+                            <div class="members-dropdown__name">Лекс Лютер</div>
+                            <div class="members-dropdown__floor">· 7 этаж</div>
+                          </div>
+                        </div>
+                        <div class="dropdown__element">
+                        </div>
+                        <div class="dropdown__element">
+                        </div>
+                        <div class="dropdown__element">
+                        </div>
+                        <div class="dropdown__element">
+                        </div>
+                        <div class="dropdown__element">
+                        </div>
+                      </div>
+                    </div>
+
               </div>
             </div>
 
@@ -164,7 +199,7 @@
     </div>
   </div>
 
-  <div class="modal">
+  <div class="modal display-none">
     <div class="modal__dialog">
       <div class="modal__icon modal__icon--success"></div>
       <div class="modal__title">Встреча создана!</div>
@@ -182,6 +217,9 @@
     const themeTextbox = new Textbox('#theme', { showClear: true });
     const startTextbox = new Textbox('#start');
     const endTextbox = new Textbox('#end');
+
+    dropdown.querySelector('.textbox__input').onfocus = () => dropdown.classList.add('dropdown--shown');
+    dropdown.querySelector('.textbox__input').onblur = () => dropdown.classList.remove('dropdown--shown');
   </script>
 </body>
 </html>

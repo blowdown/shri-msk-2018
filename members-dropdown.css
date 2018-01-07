@@ -1,0 +1,34 @@
+.members-dropdown {
+
+}
+
+.members-dropdown__element {
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-size: 13px;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+
+.members-dropdown__element--selected {
+  font-weight: bold;
+}
+
+.members-dropdown__avatar {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  background-size: cover;
+  margin-right: 8px;
+  vertical-align: bottom;
+}
+
+.members-dropdown__name {
+  display: inline-block;
+  color: #000000;
+}
+
+.members-dropdown__floor {
+  display: inline-block;
+  color: #858E98;
+}
