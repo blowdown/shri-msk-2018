@@ -1,36 +1,53 @@
 import React from 'react';
 
 import Textbox from './Textbox';
-
 import Dropdown from './Dropdown';
+import MembersDropdown from './MembersDropdown';
 
 import './meeting.css';
 import './meeting__header.css';
 
-
-import './dropdown.css';
-import './members-dropdown.css';
 import './member.css';
 import './room.css';
 
-const MemberOption = ({ selected, option: { key, name, floor } }) => (
-    <div className={`members-dropdown__element ${selected ? 'members-dropdown__element--selected' : ''}`}>
-        <div className="members-dropdown__avatar" style={{ backgroundImage: `url(https://randomuser.me/api/portraits/men/${key}.jpg)` }}></div>
-        <div className="members-dropdown__name">{name}</div>
-        <div className="members-dropdown__floor">· {floor} этаж</div>
-    </div>
-);
+function arrayToggle(array, element) {
+    array = array.slice();
+    const ix = array.indexOf(element);
+    if (ix === -1) {
+        array.push(element);
+    } else {
+        array.splice(ix, 1);
+    }
 
-const options = [
+    return array;
+}
+
+function arrayRemove(array, element) {
+    const ix = array.indexOf(element);
+    if (ix === -1) {
+        return array;
+    }
+
+    array = array.slice();
+    if (ix !== -1) {
+        array.splice(ix, 1);
+    }
+
+    return array;
+}
+
+
+const members = [
     { key: 1, name: 'Лекс Лютер', floor: 11 },
-    { key: 2, name: 'Дарт Вейдер', floor: 7 }
+    { key: 2, name: 'Дарт Вейдер', floor: 7 },
+    { key: 3, name: 'Томас Андерсон', floor: 3 }
 ];
 
 export default class Meeting extends React.Component {
     constructor(props, context) {
         super(props, context);
 
-        this.state = { selected: [] };
+        this.state = { selectedMembers: [] };
     }
 
     render() {
@@ -73,45 +90,31 @@ export default class Meeting extends React.Component {
 
                         <div className="meeting__members-dropdown">
 
-                            <div className="members-dropdown">
-                                <Dropdown
-                                    placeholder='Например, Тор Одинович'
-                                    selected={this.state.selected}
-                                    optionComponent={MemberOption}
-                                    options={options}
-                                    onSelect={option => {
-                                        const selected = this.state.selected.slice();
-                                        const ix = selected.indexOf(option);
-                                        if (ix === -1) {
-                                            selected.push(option);
-                                        } else {
-                                            selected.splice(ix, 1);
-                                        }
+                            <MembersDropdown
+                                selected={this.state.selectedMembers}
+                                members={members}
+                                onSelect={member => {
+                                    this.setState({ selectedMembers: arrayToggle(this.state.selectedMembers, member) });
+                                }}
+                            />
 
-                                        this.setState({
-                                            selected: selected
-                                        });
-                                    }}
-                                />
-                            </div>
+
 
                         </div>
 
-                        <div className="member">
-                            <div className="member__avatar" style={{ backgroundImage: 'url(https://randomuser.me/api/portraits/women/56.jpg)' }}></div>
-                            <div className="member__name">Томас Андерсон</div>
-                            <button className="member__remove"></button>
-                        </div>
-                        <div className="member">
-                            <div className="member__avatar" style={{ backgroundImage: 'url(https://randomuser.me/api/portraits/men/42.jpg)' }}></div>
-                            <div className="member__name">Лекс Лютер</div>
-                            <button className="member__remove"></button>
-                        </div>
-                        <div className="member">
-                            <div className="member__avatar" style={{ backgroundImage: 'url(https://randomuser.me/api/portraits/men/17.jpg)' }}></div>
-                            <div className="member__name">Дарт Вейдер</div>
-                            <button className="member__remove"></button>
-                        </div>
+                        {
+                            this.state.selectedMembers.map(member => (
+                                <div className="member" key={member.key}>
+                                    <div className="member__avatar" style={{ backgroundImage: `url(https://randomuser.me/api/portraits/men/${member.key}.jpg)` }}></div>
+                                    <div className="member__name">{member.name}</div>
+                                    <button className="member__remove"
+                                        onClick={() => {
+                                            this.setState({ selectedMembers: arrayRemove(this.state.selectedMembers, member) });
+                                        }}
+                                    />
+                                </div>
+                            ))
+                        }
                     </div>
 
                     <div className="meeting__room">
