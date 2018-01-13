@@ -43,11 +43,45 @@ const members = [
     { id: 3, login: 'Томас Андерсон', homeFloor: 3, avatarUrl: 'https://randomuser.me/api/portraits/men/3.jpg' }
 ];
 
+const rooms = [
+    { id: 1, title: '404', capacity: 5, floor: 4 },
+    { id: 2, title: 'Деньги', capacity: 4, floor: 2 },
+    { id: 3, title: 'Карты', capacity: 4, floor: 2 },
+    { id: 4, title: 'Ствола', capacity: 2, floor: 2 },
+    { id: 5, title: '14', capacity: 6, floor: 3 }
+];
+
+const Room = ({ timeBegin, timeEnd, room: { title, floor }, onClick }) => (
+    <div className="room" onClick={onClick}>
+        <div className="room__time">
+            {timeBegin.getHours()}:{timeBegin.getMinutes()}
+            —
+            {timeEnd.getHours()}:{timeEnd.getMinutes()}
+        </div>
+        <div className="room__name">{title} · {floor} этаж</div>
+    </div>
+);
+
+const SelectedRoom = ({ timeBegin, timeEnd, room: { title, floor }, onRemove }) => (
+    <div className="room room--selected">
+        <div className="room__time">
+            {timeBegin.getHours()}:{timeBegin.getMinutes()}
+            —
+            {timeEnd.getHours()}:{timeEnd.getMinutes()}
+        </div>
+        <div className="room__name">{title} · {floor} этаж</div>
+        <button className="room__cancel" onClick={onRemove}></button>
+    </div>
+)
+
 export default class Meeting extends React.Component {
     constructor(props, context) {
         super(props, context);
 
-        this.state = { selectedMembers: [] };
+        this.state = {
+            selectedMembers: [],
+            selectedRoom: null
+        };
     }
 
     render() {
@@ -61,13 +95,11 @@ export default class Meeting extends React.Component {
                 <div className="meeting__first-row">
                     <div className="meeting__title">
                         <h2 className="meeting__block-title">Тема</h2>
-
                         <Textbox placeholder="О чем будем говорить?" />
                     </div>
 
                     <div className="meeting__date">
                         <h2 className="meeting__block-title">Дата</h2>
-
                         <Textbox placeholder="13 января 2018" icon="calendar" />
                     </div>
 
@@ -89,7 +121,6 @@ export default class Meeting extends React.Component {
                         <h2 className="meeting__block-title">Участники</h2>
 
                         <div className="meeting__members-dropdown">
-
                             <MembersDropdown
                                 selected={this.state.selectedMembers}
                                 members={members}
@@ -97,9 +128,6 @@ export default class Meeting extends React.Component {
                                     this.setState({ selectedMembers: arrayToggle(this.state.selectedMembers, member) });
                                 }}
                             />
-
-
-
                         </div>
 
                         {
@@ -120,15 +148,29 @@ export default class Meeting extends React.Component {
                     <div className="meeting__room">
                         <h2 className="meeting__block-title">Ваша переговорка</h2>
 
-                        <div className="room room--selected">
-                            <div className="room__time">16:00—16:30</div>
-                            <div className="room__name">Готем · 4 этаж</div>
-                            <button className="room__cancel"></button>
-                        </div>
-                        <div className="room">
-                            <div className="room__time">16:00—16:30</div>
-                            <div className="room__name">Поле непаханное · 4 этаж</div>
-                        </div>
+                        {this.state.selectedRoom ?
+                            (
+                                <SelectedRoom
+                                    timeBegin={new Date()}
+                                    timeEnd={new Date()}
+                                    room={this.state.selectedRoom}
+                                    key={this.state.selectedRoom.id}
+                                    onRemove={ () => this.setState({ selectedRoom: null })}
+                                />
+                            ) :
+                            (
+                                rooms.map(room => (
+                                    <Room
+                                        timeBegin={new Date()}
+                                        timeEnd={new Date()}
+                                        room={room}
+                                        key={room.id}
+                                        onClick={() => this.setState({selectedRoom: room})}
+                                    />
+                                ))
+                            )
+                        }
+
                     </div>
                 </div>
             </div>

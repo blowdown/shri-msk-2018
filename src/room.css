@@ -9,12 +9,16 @@
   color: #000000;
   letter-spacing: 0;
   line-height: 17px;
+
+  cursor: pointer;
 }
 
 .room.room--selected {
   padding-right: 12px;
   background: #007DFF;
   color: #FFFFFF;
+
+  cursor: default;
 }
 
 .room__cancel {

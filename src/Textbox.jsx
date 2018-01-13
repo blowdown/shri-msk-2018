@@ -9,7 +9,7 @@ class Textbox extends React.Component {
     }
 
     render() {
-        const { showClear = true, placeholder, icon = null, onIconClick, onFocus, onBlur } = this.props;
+        const { showClear = true, placeholder, icon = null, onIconClick, onFocus } = this.props;
 
         const hasText = this.state.value;
         const showClearIcon = hasText && showClear;
@@ -23,7 +23,6 @@ class Textbox extends React.Component {
                     placeholder={placeholder}
                     onChange={e => this.setState({ value: e.target.value })}
                     onFocus={onFocus}
-                    onBlur={onBlur}
                     />
 
                 { !icon ? null :
