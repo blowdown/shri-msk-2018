@@ -46,6 +46,8 @@
   opacity: 0.3;
   transition: opacity 200ms ease-in-out;
 
+  border: 0;
+  background: transparent;
 }
 
 .textbox__icon:hover {

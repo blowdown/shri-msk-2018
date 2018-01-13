@@ -28,26 +28,19 @@ const Meeting = props => (
             <div className="meeting__date">
                 <h2 className="meeting__block-title">Дата</h2>
 
-                <div className="textbox textbox--with-icon">
-                    <input type="text" className="textbox__input" />
-                    <div className="textbox__icon" data-type="calendar"></div>
-                </div>
+                <Textbox placeholder="13 января 2018" icon="calendar"/>
             </div>
 
             <div className="meeting__start">
                 <h2 className="meeting__block-title">Начало</h2>
-                <div className="textbox" id="start">
-                    <input type="text" className="textbox__input" placeholder="16:00" />
-                </div>
+                <Textbox placeholder="16:00" showClear={false} />
             </div>
 
             <div className="meeting__dash"></div>
 
             <div className="meeting__end">
                 <h2 className="meeting__block-title">Конец</h2>
-                <div className="textbox" id="end">
-                    <input type="text" className="textbox__input" placeholder="17:00" />
-                </div>
+                <Textbox placeholder="17:00" showClear={false}/>
             </div>
         </div>
 
@@ -59,9 +52,7 @@ const Meeting = props => (
                     <div className="members-dropdown">
 
                         <div className="dropdown" id="dropdown">
-                            <div className="textbox">
-                                <input type="text" className="textbox__input" placeholder="Например, Тор Одинович" />
-                            </div>
+                            <Textbox placeholder="Например, Тор Одинович" />
 
                             <div className="dropdown__panel">
                                 <div className="dropdown__element">
