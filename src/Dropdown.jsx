@@ -42,7 +42,7 @@ export default class Dropdown extends React.Component {
                     {this.props.options.map((option, index) => (
                         <div
                             className={`dropdown__element ${this.props.selected.indexOf(option) !== -1 ? 'dropdown__element--selected' : ''}`}
-                            key={option.key}
+                            key={option.key || option.id}
                             onClick={() => this.props.onSelect(option)}
                         >
                             <Option option={option} selected={false} />

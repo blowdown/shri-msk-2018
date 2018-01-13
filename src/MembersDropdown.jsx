@@ -2,11 +2,11 @@ import React from 'react';
 import Dropdown from './Dropdown';
 import './members-dropdown.css';
 
-const MemberOption = ({ selected, option: { key, name, floor } }) => (
+const MemberOption = ({ selected, option: { login, homeFloor, avatarUrl } }) => (
     <div className={`members-dropdown__element ${selected ? 'members-dropdown__element--selected' : ''}`}>
-        <div className="members-dropdown__avatar" style={{ backgroundImage: `url(https://randomuser.me/api/portraits/men/${key}.jpg)` }}></div>
-        <div className="members-dropdown__name">{name}</div>
-        <div className="members-dropdown__floor">· {floor} этаж</div>
+        <div className="members-dropdown__avatar" style={{ backgroundImage: `url(${avatarUrl})` }} />
+        <div className="members-dropdown__name">{login}</div>
+        <div className="members-dropdown__floor">· {homeFloor} этаж</div>
     </div>
 );
 

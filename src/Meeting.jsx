@@ -38,9 +38,9 @@ function arrayRemove(array, element) {
 
 
 const members = [
-    { key: 1, name: 'Лекс Лютер', floor: 11 },
-    { key: 2, name: 'Дарт Вейдер', floor: 7 },
-    { key: 3, name: 'Томас Андерсон', floor: 3 }
+    { id: 1, login: 'Лекс Лютер', homeFloor: 11, avatarUrl: 'https://randomuser.me/api/portraits/men/1.jpg' },
+    { id: 2, login: 'Дарт Вейдер', homeFloor: 7, avatarUrl: 'https://randomuser.me/api/portraits/men/2.jpg' },
+    { id: 3, login: 'Томас Андерсон', homeFloor: 3, avatarUrl: 'https://randomuser.me/api/portraits/men/3.jpg' }
 ];
 
 export default class Meeting extends React.Component {
@@ -104,9 +104,9 @@ export default class Meeting extends React.Component {
 
                         {
                             this.state.selectedMembers.map(member => (
-                                <div className="member" key={member.key}>
-                                    <div className="member__avatar" style={{ backgroundImage: `url(https://randomuser.me/api/portraits/men/${member.key}.jpg)` }}></div>
-                                    <div className="member__name">{member.name}</div>
+                                <div className="member" key={member.id}>
+                                    <div className="member__avatar" style={{ backgroundImage: `url(${member.avatarUrl})` }} />
+                                    <div className="member__name">{member.login}</div>
                                     <button className="member__remove"
                                         onClick={() => {
                                             this.setState({ selectedMembers: arrayRemove(this.state.selectedMembers, member) });
