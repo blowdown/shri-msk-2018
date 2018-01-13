@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Button from './Button';
 import Modal from './Modal';
+import Header from './Header';
 
 class App extends React.Component {
     constructor (props, context) {
@@ -20,11 +21,15 @@ class App extends React.Component {
 
     render() {
         return <div>
+
+            <Header></Header>
+
             { !this.state.post ? '---' :
                 <div>
                     {this.state.post.title}
                 </div>
             }
+
             <Button primary={true} onClick={() => this.setState({ showModal: true })}>
                 Show modal
             </Button>
