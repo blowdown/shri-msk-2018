@@ -1,46 +1,46 @@
 import React from 'react';
 import './textbox.css';
 
-class Textbox extends React.Component {
-    constructor(props, context) {
-        super(props, context);
+const Textbox = ({
+    value,
+    showClear = true,
+    placeholder,
+    icon = null,
+    onIconClick,
+    onFocus,
+    onChange = () => {}
+}) => {
+    const hasText = Boolean(value);
+    const showClearIcon = hasText && showClear;
 
-        this.state = { value: '' };
-    }
+    return (
+        <div className={`textbox ${icon || showClearIcon ? 'textbox--with-icon' : ''}`}>
+            <input
+                value={value}
+                type="text"
+                className="textbox__input"
+                placeholder={placeholder}
+                onChange={e => onChange(e.target.value)}
+                onFocus={onFocus}
+            />
 
-    render() {
-        const { showClear = true, placeholder, icon = null, onIconClick, onFocus } = this.props;
+            {!icon ? null :
+                <button
+                    className="textbox__icon"
+                    data-type={icon}
+                    onClick={onIconClick}
+                />
+            }
 
-        const hasText = this.state.value;
-        const showClearIcon = hasText && showClear;
+            {!(showClearIcon && !icon) ? null :
+                <button
+                    className="textbox__icon"
+                    data-type="clear"
+                    onClick={() => onChange('')}
+                />
+            }
+        </div>
+    );
+};
 
-        return (
-            <div className={`textbox ${icon || showClearIcon ? 'textbox--with-icon' : ''}`}>
-                <input
-                    value={this.state.value}
-                    type="text"
-                    className="textbox__input"
-                    placeholder={placeholder}
-                    onChange={e => this.setState({ value: e.target.value })}
-                    onFocus={onFocus}
-                    />
-
-                { !icon ? null :
-                    <button
-                        className="textbox__icon"
-                        data-type={icon}
-                        onClick={onIconClick}/>
-                }
-
-                { !(showClearIcon && !icon) ? null :
-                    <button
-                        className="textbox__icon"
-                        data-type="clear"
-                        onClick={() => this.setState({ value: '' })}
-                        />
-                }
-            </div>
-        );
-    }
-}
 export default Textbox;
