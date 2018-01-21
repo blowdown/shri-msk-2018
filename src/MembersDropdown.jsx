@@ -13,10 +13,12 @@ const MemberOption = ({ selected, option: { login, homeFloor, avatarUrl } }) => 
 const MembersDropdown = ({ members, selected, onSelect }) => (
     <Dropdown
         placeholder='Например, Тор Одинович'
+        closeOnSelect={true}
         selected={selected}
         optionComponent={MemberOption}
         options={members}
         onSelect={onSelect}
+        getSuggestText={(option) => option.login}
     />
 );
 
