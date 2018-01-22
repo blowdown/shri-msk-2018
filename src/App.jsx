@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Modal from './Modal';
 import Meeting from './Meeting';
+import Button from './Button';
 
 const members = [
     { id: 1, login: 'Лекс Лютер', homeFloor: 11, avatarUrl: 'https://randomuser.me/api/portraits/men/1.jpg' },
@@ -18,12 +19,40 @@ const rooms = [
 ];
 
 export default class App extends React.Component {
+    constructor(props, context) {
+        super(props, context);
+        this.state = {
+            location: 'index',
+        }
+    }
+
     render() {
-        return (
-            <Meeting
-                members={members}
-                rooms={rooms}
-            />
-        );
+        if (this.state.location.startsWith('meeting-creation')) {
+            return <React.Fragment>
+                <Meeting
+                    members={members}
+                    rooms={rooms}
+                    onCancel={() => this.setState({ location: 'meeting-creation-cancel' })}
+                    onCreate={(data) => this.setState({ location: 'index-meeting-created' })}
+                />
+                {this.state.location !== 'meeting-creation-cancel' ? null :
+                    <Modal icon="danger" title={'Встреча будет\nудалена безвозвратно'}>
+                        <Button onClick={() => this.setState({ location: 'meeting-creation' })}>Отмена</Button>
+                        <Button onClick={() => this.setState({ location: 'index' })}>Удалить</Button>
+                    </Modal>
+                }
+            </React.Fragment>;
+        }
+
+        return <React.Fragment>
+            <Button onClick={() => this.setState({ location: 'meeting-creation' })}>
+                create meeting
+            </Button>
+            {this.state.location !== 'index-meeting-created' ? null :
+                <Modal icon="success" title="Встреча создана!" description={'14 декабря, 15:00—17:00\nГотем · 4 этаж'}>
+                    <Button primary={true} onClick={() => this.setState({ location: 'index' })}>Хорошо</Button>
+                </Modal>
+            }
+        </React.Fragment>;
     }
 }

@@ -33,11 +33,11 @@ export default class Meeting extends React.Component {
     }
 
     _cancelMeeting() {
-        alert('cancel');
+        this.props.onCancel();
     }
 
     _createMeeting() {
-        alert('create ' + JSON.stringify(this.state, null, 4));
+        this.props.onCreate(this.state);
     }
 
     render() {
