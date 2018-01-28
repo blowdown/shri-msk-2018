@@ -1,19 +1,125 @@
-.calendar {}
+.calendar {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.calendar__page-header {
+    flex: 0 0 auto;
+}
+
+.calendar__meat {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+.calendar__meat-wrapper {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+}
 
 .calendar__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 46px;
+    flex: 0 0 auto;
+}
+
+.calendar__header-date {
+    flex: 0 0 auto;
 }
 
 .calendar__time {
-  height: 46px;
-  /* width: 100%; */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0;
-  border-bottom: 1px solid #E9ECEF;
-  flex: 1 0 auto;
+    height: 46px;
+    margin: 0;
+    border-bottom: 1px solid #E9ECEF;
+    flex: 1 1 auto;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
+.calendar__time-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.calendar__time-entry {
+    display: inline-block;
+    height: 13px;
+    width: 49px;
+    text-align: center;
+    font-size: 11px;
+    padding: 17px 0 16px 17px;
+    font-family: HelveticaNeue-Bold, Arial;
+    font-weight: bold;
+    color: #252525;
+    letter-spacing: 0.4px;
+
+    flex: 0 0 auto;
+}
+
+.calendar__time-entry.calendar__time-entry--past {
+    color: #858E98;
+}
+
+.calendar__sidebar {
+    width: 245px;
+    border-right: 1px solid #E9ECEF;
+    flex: 0 0 auto;
+    padding-left: 25px;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.calendar__sidebar-floor {
+    text-transform: uppercase;
+    font-family: HelveticaNeue-Bold, Arial;
+    font-weight: bold;
+    font-size: 11px;
+    color: #858E98;
+    letter-spacing: 0.4px;
+    margin-top: 24px;
+    margin-bottom: 4px;
+}
+
+.calendar__sidebar-room {
+    height: 44px;
+    padding: 4px 0;
+}
+
+.calendar__sidebar-room-name {
+    font-family: HelveticaNeue-Medium, Arial;
+    font-weight: bold;
+    font-size: 15px;
+    color: #000000;
+    line-height: 17px;
+    margin-bottom: 2px;
+}
+
+.calendar__sidebar-room-capacity {
+    font-family: HelveticaNeue, Arial;
+    font-size: 13px;
+    color: #000000;
+    line-height: 17px;
+}
+
+.calendar__sidebar-room+.calendar__sidebar-room {
+    margin-top: 8px;
+}
+
+.calendar__sidebar-room--selected > .calendar__sidebar-room-name {
+    color: #0070E0;
+}
+
+.calendar__sidebar-room--reserved > .calendar__sidebar-room-name {
+    color: #858E98;
+}
