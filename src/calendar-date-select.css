@@ -1,9 +1,7 @@
 .calendar-date-select {
   height: 46px;
   width: 245px;
-  border-bottom: 1px solid #E9ECEF;
   background: #FFFFFF;
-  box-shadow: 0 -1px 0 0 #E9ECEF;
   display: flex;
   justify-content: space-between;
   align-items: center;

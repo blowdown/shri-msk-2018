@@ -1,0 +1,45 @@
+.timeline {
+  background: #F6F7F9;
+  height: 100%;
+  width: 100%;
+  padding-top: 2px;
+  box-sizing: border-box;
+  overflow: scroll;
+}
+
+.timeline__spacer {
+  height: 29px;
+}
+
+.timeline__spacer--first {
+  height: 21px;
+}
+
+.timeline__rows {
+  width: calc(66px * 24);
+}
+
+.timeline__row {
+  background: #FFFFFF;
+  height: 28px;
+  margin-top: 24px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+
+}
+
+.timeline__meeting {
+  background: #D5DFE9;
+}
+
+.timeline__meeting,
+.timeline__vacant {
+  cursor: pointer;
+}
+
+.timeline__meeting:hover {
+  background: #99A9B9;
+}
