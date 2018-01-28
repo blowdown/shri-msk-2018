@@ -1,0 +1,19 @@
+.calendar {}
+
+.calendar__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar__time {
+  height: 46px;
+  /* width: 100%; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  border-bottom: 1px solid #E9ECEF;
+  flex: 1 0 auto;
+}
+
