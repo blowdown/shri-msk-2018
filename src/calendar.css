@@ -143,13 +143,13 @@
   height: 44px;
   padding: 4px 0;
   box-sizing: border-box;
+  color: #000000;
 }
 
 .calendar__sidebar-room-name {
   font-family: HelveticaNeue-Medium, Arial;
   font-weight: bold;
   font-size: 15px;
-  color: #000000;
   line-height: 17px;
   margin-bottom: 2px;
 }
@@ -157,7 +157,6 @@
 .calendar__sidebar-room-capacity {
   font-family: HelveticaNeue, Arial;
   font-size: 13px;
-  color: #000000;
   line-height: 17px;
 }
 
@@ -169,7 +168,7 @@
   color: #0070E0;
 }
 
-.calendar__sidebar-room--reserved>.calendar__sidebar-room-name {
+.calendar__sidebar-room--reserved {
   color: #858E98;
 }
 
