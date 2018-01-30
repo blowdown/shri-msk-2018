@@ -20,6 +20,34 @@
   margin-left: 16px;
 }
 
+.button.button--primary:hover {
+  background: #0059FF;
+}
+
+.button.button--primary:active {
+  background: #0B00FF;
+}
+
+.button.button--primary:disabled {
+  background: #E9ECEF;
+}
+
 .button.button--primary:focus {
-  outline-color: orangered;
+  outline: none;
+}
+
+.button:hover {
+  background: rgba(0,16,33,0.05);
+}
+
+.button:active {
+  background: rgba(4,29,56,0.14);
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:disabled {
+  background: #E2E5E8;
 }
