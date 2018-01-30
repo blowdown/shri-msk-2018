@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="./timeline.css">
   <link rel="stylesheet" href="tooltip.css">
   <link rel="stylesheet" href="timebar.css">
+  <link rel="stylesheet" href="sidebar.css">
   <style>
     body,
     html {
@@ -21,12 +22,12 @@
     }
   </style>
   <script>
-    window.addEventListener('DOMContentLoaded', function () {
+    window.addEventListener('DOMContentLoaded', function() {
       const timeline = document.querySelector('.timeline');
       const sidebar = document.querySelector('.calendar__sidebar');
-      const time = document.querySelector('.timebar');
+      const time = document.querySelector('.calendar__timebar');
 
-      timeline.addEventListener('scroll', function () {
+      timeline.addEventListener('scroll', function() {
         sidebar.scrollTop = timeline.scrollTop;
         time.scrollLeft = timeline.scrollLeft;
       });
@@ -82,70 +83,72 @@
     </div>
     <div class="calendar__meat">
       <div class="calendar__sidebar">
-        <div class="calendar__sidebar-floor">7 этаж</div>
-        <div class="calendar__sidebar-room calendar__sidebar-room--selected">
-          <div class="calendar__sidebar-room-name">Прачечная</div>
-          <div class="calendar__sidebar-room-capacity">до 10 человек</div>
-        </div>
-        <div class="calendar__sidebar-room calendar__sidebar-room--reserved">
-          <div class="calendar__sidebar-room-name">Прачечная</div>
-          <div class="calendar__sidebar-room-capacity">до 10 человек</div>
-        </div>
-        <div class="calendar__sidebar-room">
-          <div class="calendar__sidebar-room-name">Прачечная</div>
-          <div class="calendar__sidebar-room-capacity">до 10 человек</div>
-        </div>
-        <div class="calendar__sidebar-room">
-          <div class="calendar__sidebar-room-name">Прачечная</div>
-          <div class="calendar__sidebar-room-capacity">до 10 человек</div>
-        </div>
-        <div class="calendar__sidebar-room">
-          <div class="calendar__sidebar-room-name">Прачечная</div>
-          <div class="calendar__sidebar-room-capacity">до 10 человек</div>
-        </div>
+        <div class="sidebar">
+          <div class="sidebar__floor">7 этаж</div>
+          <div class="sidebar__room sidebar__room--selected">
+            <div class="sidebar__room-name">Прачечная</div>
+            <div class="sidebar__room-capacity">до 10 человек</div>
+          </div>
+          <div class="sidebar__room sidebar__room--reserved">
+            <div class="sidebar__room-name">Прачечная</div>
+            <div class="sidebar__room-capacity">до 10 человек</div>
+          </div>
+          <div class="sidebar__room">
+            <div class="sidebar__room-name">Прачечная</div>
+            <div class="sidebar__room-capacity">до 10 человек</div>
+          </div>
+          <div class="sidebar__room">
+            <div class="sidebar__room-name">Прачечная</div>
+            <div class="sidebar__room-capacity">до 10 человек</div>
+          </div>
+          <div class="sidebar__room">
+            <div class="sidebar__room-name">Прачечная</div>
+            <div class="sidebar__room-capacity">до 10 человек</div>
+          </div>
 
-        <div class="calendar__sidebar-floor">8 этаж</div>
-        <div class="calendar__sidebar-room">
-          <div class="calendar__sidebar-room-name">Прачечная</div>
-          <div class="calendar__sidebar-room-capacity">до 10 человек</div>
-        </div>
-        <div class="calendar__sidebar-room">
-          <div class="calendar__sidebar-room-name">Прачечная</div>
-          <div class="calendar__sidebar-room-capacity">до 10 человек</div>
-        </div>
-        <div class="calendar__sidebar-room">
-          <div class="calendar__sidebar-room-name">Прачечная</div>
-          <div class="calendar__sidebar-room-capacity">до 10 человек</div>
-        </div>
-        <div class="calendar__sidebar-room">
-          <div class="calendar__sidebar-room-name">Прачечная</div>
-          <div class="calendar__sidebar-room-capacity">до 10 человек</div>
-        </div>
-        <div class="calendar__sidebar-room">
-          <div class="calendar__sidebar-room-name">Прачечная</div>
-          <div class="calendar__sidebar-room-capacity">до 10 человек</div>
-        </div>
+          <div class="sidebar__floor">8 этаж</div>
+          <div class="sidebar__room">
+            <div class="sidebar__room-name">Прачечная</div>
+            <div class="sidebar__room-capacity">до 10 человек</div>
+          </div>
+          <div class="sidebar__room">
+            <div class="sidebar__room-name">Прачечная</div>
+            <div class="sidebar__room-capacity">до 10 человек</div>
+          </div>
+          <div class="sidebar__room">
+            <div class="sidebar__room-name">Прачечная</div>
+            <div class="sidebar__room-capacity">до 10 человек</div>
+          </div>
+          <div class="sidebar__room">
+            <div class="sidebar__room-name">Прачечная</div>
+            <div class="sidebar__room-capacity">до 10 человек</div>
+          </div>
+          <div class="sidebar__room">
+            <div class="sidebar__room-name">Прачечная</div>
+            <div class="sidebar__room-capacity">до 10 человек</div>
+          </div>
 
-        <div class="calendar__sidebar-floor">9 этаж</div>
-        <div class="calendar__sidebar-room">
-          <div class="calendar__sidebar-room-name">Прачечная</div>
-          <div class="calendar__sidebar-room-capacity">до 10 человек</div>
-        </div>
-        <div class="calendar__sidebar-room">
-          <div class="calendar__sidebar-room-name">Прачечная</div>
-          <div class="calendar__sidebar-room-capacity">до 10 человек</div>
-        </div>
-        <div class="calendar__sidebar-room">
-          <div class="calendar__sidebar-room-name">Прачечная</div>
-          <div class="calendar__sidebar-room-capacity">до 10 человек</div>
-        </div>
-        <div class="calendar__sidebar-room">
-          <div class="calendar__sidebar-room-name">Прачечная</div>
-          <div class="calendar__sidebar-room-capacity">до 10 человек</div>
-        </div>
-        <div class="calendar__sidebar-room">
-          <div class="calendar__sidebar-room-name">Прачечная</div>
-          <div class="calendar__sidebar-room-capacity">до 10 человек</div>
+          <div class="sidebar__floor">9 этаж</div>
+          <div class="sidebar__room">
+            <div class="sidebar__room-name">Прачечная</div>
+            <div class="sidebar__room-capacity">до 10 человек</div>
+          </div>
+          <div class="sidebar__room">
+            <div class="sidebar__room-name">Прачечная</div>
+            <div class="sidebar__room-capacity">до 10 человек</div>
+          </div>
+          <div class="sidebar__room">
+            <div class="sidebar__room-name">Прачечная</div>
+            <div class="sidebar__room-capacity">до 10 человек</div>
+          </div>
+          <div class="sidebar__room">
+            <div class="sidebar__room-name">Прачечная</div>
+            <div class="sidebar__room-capacity">до 10 человек</div>
+          </div>
+          <div class="sidebar__room">
+            <div class="sidebar__room-name">Прачечная</div>
+            <div class="sidebar__room-capacity">до 10 человек</div>
+          </div>
         </div>
       </div>
       <div class="calendar__timeline">
@@ -204,7 +207,7 @@
                 <div class="tooltip__body">
                   <button class="tooltip__edit"></button>
                   <div class="tooltip__title">Рассуждения о высоком</div>
-                  <div class="tooltip__description">14 декабря, 15:00—17:00  ·  Жёлтый дом</div>
+                  <div class="tooltip__description">14 декабря, 15:00—17:00 · Жёлтый дом</div>
                   <div class="tooltip__info">
                     <div class="tooltip__avatar" style="background-image: url(https://randomuser.me/api/portraits/women/56.jpg);"></div>
                     <div class="tooltip__name">Дарт Вейдер</div>

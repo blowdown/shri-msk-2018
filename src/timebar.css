@@ -1,8 +1,6 @@
 .timebar {
   height: 46px;
   margin: 0;
-  overflow-x: hidden;
-  overflow-y: hidden;
   position: relative;
 
   display: flex;

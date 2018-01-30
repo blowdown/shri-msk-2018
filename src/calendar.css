@@ -43,64 +43,10 @@
 
 .calendar__timebar {
   flex: 1 1 auto;
+  overflow: hidden;
 }
 
 .calendar__sidebar {
-  width: 245px;
-  border-right: 1px solid #E9ECEF;
   flex: 0 0 auto;
-  padding-left: 25px;
-  box-sizing: border-box;
   overflow-y: hidden;
 }
-
-.calendar__sidebar::before {
-  height: 2px;
-  display: block;
-  content: "";
-}
-
-.calendar__sidebar-floor {
-  text-transform: uppercase;
-  font-family: HelveticaNeue-Bold, Arial;
-  font-weight: bold;
-  font-size: 11px;
-  color: #858E98;
-  letter-spacing: 0.4px;
-  margin-top: 20px;
-  margin-bottom: 4px;
-}
-
-.calendar__sidebar-room {
-  height: 44px;
-  padding: 4px 0;
-  box-sizing: border-box;
-  color: #000000;
-}
-
-.calendar__sidebar-room-name {
-  font-family: HelveticaNeue-Medium, Arial;
-  font-weight: bold;
-  font-size: 15px;
-  line-height: 17px;
-  margin-bottom: 2px;
-}
-
-.calendar__sidebar-room-capacity {
-  font-family: HelveticaNeue, Arial;
-  font-size: 13px;
-  line-height: 17px;
-}
-
-.calendar__sidebar-room+.calendar__sidebar-room {
-  margin-top: 8px;
-}
-
-.calendar__sidebar-room--selected>.calendar__sidebar-room-name {
-  color: #0070E0;
-}
-
-.calendar__sidebar-room--reserved {
-  color: #858E98;
-}
-
