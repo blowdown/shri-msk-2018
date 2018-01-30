@@ -1,4 +1,4 @@
-.calendar-date-select {
+.date-select {
   height: 46px;
   width: 245px;
   background: #FFFFFF;
@@ -8,8 +8,8 @@
   margin: 0;
 }
 
-.calendar-date-select__backward,
-.calendar-date-select__forward {
+.date-select__backward,
+.date-select__forward {
   width: 24px;
   height: 24px;
   background-color: #E9ECEF;
@@ -21,21 +21,21 @@
   padding: 0;
 }
 
-.calendar-date-select__backward {
+.date-select__backward {
   margin: 11px 0 11px 24px;
 }
 
-.calendar-date-select__forward {
+.date-select__forward {
   margin: 11px 24px 11px 0;
 }
 
-.calendar-date-select__forward:focus,
-.calendar-date-select__backward:focus {
+.date-select__forward:focus,
+.date-select__backward:focus {
   outline: none;
 }
 
-.calendar-date-select__forward::before,
-.calendar-date-select__backward::before {
+.date-select__forward::before,
+.date-select__backward::before {
   background-repeat: no-repeat;
   background-position: center center;
   width: 10px;
@@ -47,24 +47,24 @@
   opacity: 0.43;
 }
 
-.calendar-date-select__backward::before {
+.date-select__backward::before {
   background-image: url(https://yandex-shri-msk-2018.github.io/entrance-task-2/desktop-guide/assets/arrow2.svg);
   left: 6px;
 }
 
-.calendar-date-select__forward::before {
+.date-select__forward::before {
   background-image: url(https://yandex-shri-msk-2018.github.io/entrance-task-2/desktop-guide/assets/arrow.svg);
   left: 8px;
 }
 
-.calendar-date-select__forward:focus::before,
-.calendar-date-select__forward:hover::before,
-.calendar-date-select__backward:focus::before,
-.calendar-date-select__backward:hover::before {
+.date-select__forward:focus::before,
+.date-select__forward:hover::before,
+.date-select__backward:focus::before,
+.date-select__backward:hover::before {
   opacity: 1;
 }
 
-.calendar-date-select__text {
+.date-select__text {
   font-family: Arial;
   font-size: 15px;
   color: #000000;
@@ -78,8 +78,8 @@
   padding: 0;
 }
 
-.calendar-date-select__text:focus,
-.calendar-date-select__text:hover {
+.date-select__text:focus,
+.date-select__text:hover {
   color: #0070E0;
   outline: none;
   cursor: pointer;
