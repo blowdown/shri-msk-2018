@@ -54,6 +54,10 @@
   opacity: 1;
 }
 
+.textbox__icon:focus {
+  outline: none;
+}
+
 .textbox__icon[data-type="calendar"] {
   background-image: url(https://yandex-shri-msk-2018.github.io/entrance-task-2/desktop-guide/preview/page-1-assets.png);
   background-position: -138.5px -74.5px;
@@ -66,4 +70,12 @@
   background-position: -78.5px -74.5px;
   background-repeat: no-repeat;
   background-size: 213px auto;
+}
+
+.textbox__icon[data-type="collapse"] {
+  background-image: url(https://yandex-shri-msk-2018.github.io/entrance-task-2/desktop-guide/assets/arrow.svg);
+  transform: rotate(-90deg);
+  background-repeat: no-repeat;
+  background-position: center;
+  /* TODO: wrong icon, need black one */
 }

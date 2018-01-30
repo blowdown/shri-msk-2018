@@ -43,6 +43,8 @@ export default class Dropdown extends React.Component {
                     onFocus={() => this.setState({ isPanelOpened: true })}
                     onChange={(newText) => this.setState({ filterText: newText })}
                     value={this.state.filterText}
+                    icon={this.state.isPanelOpened ? 'collapse' : null}
+                    onIconClick={() => this.setState({ isPanelOpened: false })}
                 />
 
                 <div className="dropdown__panel">
