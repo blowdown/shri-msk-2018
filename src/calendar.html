@@ -50,6 +50,7 @@
         </div>
       </div>
       <div class="calendar__time">
+        <div class="calendar__time-entry-now" style="left: 165px;">12:40</div>
         <div class="calendar__time-entry calendar__time-entry--past">1</div>
         <div class="calendar__time-entry calendar__time-entry--past">2</div>
         <div class="calendar__time-entry calendar__time-entry--past">3</div>
@@ -145,49 +146,54 @@
       </div>
       <div class="calendar__timeline">
         <div class="timeline">
-          <div class="timeline__rulers">
-            <div class="timeline__ruler"></div>
-            <div class="timeline__ruler"></div>
-            <div class="timeline__ruler"></div>
-            <div class="timeline__ruler"></div>
-            <div class="timeline__ruler"></div>
-            <div class="timeline__ruler"></div>
-            <div class="timeline__ruler"></div>
-            <div class="timeline__ruler"></div>
-            <div class="timeline__ruler"></div>
-            <div class="timeline__ruler"></div>
-            <div class="timeline__ruler"></div>
-            <div class="timeline__ruler"></div>
-            <div class="timeline__ruler"></div>
-            <div class="timeline__ruler"></div>
-            <div class="timeline__ruler"></div>
-            <div class="timeline__ruler"></div>
-            <div class="timeline__ruler"></div>
-            <div class="timeline__ruler"></div>
-            <div class="timeline__ruler"></div>
-            <div class="timeline__ruler"></div>
-            <div class="timeline__ruler"></div>
-            <div class="timeline__ruler"></div>
-            <div class="timeline__ruler"></div>
-          </div>
-          <div class="timeline__rows">
-            <div class="timeline__spacer timeline__spacer--first"></div>
-            <div class="timeline__row">
-              <div class="timeline__meeting" style="width: calc(100% / 24);"></div>
-              <div class="timeline__vacant" style="width: calc(100% / 12)"></div>
-              <div class="timeline__meeting" style="width: calc(100% / 24 * 1.5)"></div>
+          <div class="timeline__body">
+            <div class="timeline__ruler-now" style="left: 165px;"></div>
+            <div class="timeline__rulers">
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
             </div>
-            <div class="timeline__row"></div>
-            <div class="timeline__row"></div>
-            <div class="timeline__row"></div>
-            <div class="timeline__row"></div>
+            <div class="timeline__rows">
+              <div class="timeline__spacer timeline__spacer--first"></div>
+              <div class="timeline__row">
+                <div class="timeline__meeting" style="width: calc(100% / 24);"></div>
+                <div class="timeline__vacant" style="width: calc(100% / 12)">
+                  <button class="timeline__create-meeting"></button>
+                </div>
+                <div class="timeline__meeting timeline__meeting--pressed" style="width: calc(100% / 24 * 1.5)"></div>
+              </div>
+              <div class="timeline__row"></div>
+              <div class="timeline__row"></div>
+              <div class="timeline__row"></div>
+              <div class="timeline__row"></div>
 
-            <div class="timeline__spacer"></div>
-            <div class="timeline__row"></div>
-            <div class="timeline__row"></div>
-            <div class="timeline__row"></div>
-            <div class="timeline__row"></div>
-            <div class="timeline__row"></div>
+              <div class="timeline__spacer"></div>
+              <div class="timeline__row"></div>
+              <div class="timeline__row"></div>
+              <div class="timeline__row"></div>
+              <div class="timeline__row"></div>
+              <div class="timeline__row"></div>
+            </div>
           </div>
         </div>
       </div>

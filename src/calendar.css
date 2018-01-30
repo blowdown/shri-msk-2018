@@ -47,9 +47,36 @@
   flex: 1 1 auto;
   overflow-x: hidden;
   overflow-y: hidden;
+  position: relative;
 
   display: flex;
   align-items: center;
+}
+
+.calendar__time-entry-now {
+  width: 49px;
+  height: 20px;
+  background: #007DFF;
+  border-radius: 100px;
+  text-align: center;
+  font-family: HelveticaNeue-Bold, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 11px;
+  color: #FFFFFF;
+  letter-spacing: 0.4px;
+  padding: 3px 0 4px 0;
+  position: absolute;
+  box-sizing: border-box;
+  margin-left: -24.5px;
+}
+
+.calendar__time-entry-now::after {
+  content: "";
+  display: block;
+  border-right: 1px solid #007DFF;
+  height: 20px;
+  position: relative;
+  left: -23.5px;
 }
 
 .calendar__time::before,
@@ -92,8 +119,13 @@
   flex: 0 0 auto;
   padding-left: 25px;
   box-sizing: border-box;
-  padding-top: 2px;
   overflow-y: hidden;
+}
+
+.calendar__sidebar::before {
+  height: 2px;
+  display: block;
+  content: "";
 }
 
 .calendar__sidebar-floor {
