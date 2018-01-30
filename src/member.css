@@ -38,4 +38,14 @@
   margin: 4px 8px auto 12px;
 
   cursor: pointer;
+
+  filter: brightness(-1000%);
+  opacity: 0.5;
+  transition: opacity ease-in-out 200ms;
+}
+
+.member__remove:hover,
+.member__remove:focus {
+  outline: none;
+  opacity: 1;
 }
