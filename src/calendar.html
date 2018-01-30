@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="./header.css">
   <link rel="stylesheet" href="./timeline.css">
   <link rel="stylesheet" href="tooltip.css">
+  <link rel="stylesheet" href="timebar.css">
   <style>
     body,
     html {
@@ -23,7 +24,7 @@
     window.addEventListener('DOMContentLoaded', function () {
       const timeline = document.querySelector('.timeline');
       const sidebar = document.querySelector('.calendar__sidebar');
-      const time = document.querySelector('.calendar__time');
+      const time = document.querySelector('.timebar');
 
       timeline.addEventListener('scroll', function () {
         sidebar.scrollTop = timeline.scrollTop;
@@ -50,31 +51,33 @@
           <button class="calendar-date-select__forward"></button>
         </div>
       </div>
-      <div class="calendar__time">
-        <div class="calendar__time-entry-now" style="left: 165px;">12:40</div>
-        <div class="calendar__time-entry calendar__time-entry--past">1</div>
-        <div class="calendar__time-entry calendar__time-entry--past">2</div>
-        <div class="calendar__time-entry calendar__time-entry--past">3</div>
-        <div class="calendar__time-entry">4</div>
-        <div class="calendar__time-entry">5</div>
-        <div class="calendar__time-entry">6</div>
-        <div class="calendar__time-entry">7</div>
-        <div class="calendar__time-entry">8</div>
-        <div class="calendar__time-entry">9</div>
-        <div class="calendar__time-entry">10</div>
-        <div class="calendar__time-entry">11</div>
-        <div class="calendar__time-entry">12</div>
-        <div class="calendar__time-entry">13</div>
-        <div class="calendar__time-entry">14</div>
-        <div class="calendar__time-entry">15</div>
-        <div class="calendar__time-entry">16</div>
-        <div class="calendar__time-entry">17</div>
-        <div class="calendar__time-entry">18</div>
-        <div class="calendar__time-entry">19</div>
-        <div class="calendar__time-entry">20</div>
-        <div class="calendar__time-entry">21</div>
-        <div class="calendar__time-entry">22</div>
-        <div class="calendar__time-entry">23</div>
+      <div class="calendar__timebar">
+        <div class="timebar">
+          <div class="timebar__now" style="left: 165px;">12:40</div>
+          <div class="timebar__entry timebar__entry--past">1</div>
+          <div class="timebar__entry timebar__entry--past">2</div>
+          <div class="timebar__entry timebar__entry--past">3</div>
+          <div class="timebar__entry">4</div>
+          <div class="timebar__entry">5</div>
+          <div class="timebar__entry">6</div>
+          <div class="timebar__entry">7</div>
+          <div class="timebar__entry">8</div>
+          <div class="timebar__entry">9</div>
+          <div class="timebar__entry">10</div>
+          <div class="timebar__entry">11</div>
+          <div class="timebar__entry">12</div>
+          <div class="timebar__entry">13</div>
+          <div class="timebar__entry">14</div>
+          <div class="timebar__entry">15</div>
+          <div class="timebar__entry">16</div>
+          <div class="timebar__entry">17</div>
+          <div class="timebar__entry">18</div>
+          <div class="timebar__entry">19</div>
+          <div class="timebar__entry">20</div>
+          <div class="timebar__entry">21</div>
+          <div class="timebar__entry">22</div>
+          <div class="timebar__entry">23</div>
+        </div>
       </div>
     </div>
     <div class="calendar__meat">

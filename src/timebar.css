@@ -1,0 +1,70 @@
+.timebar {
+  height: 46px;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+.timebar__now {
+  width: 49px;
+  height: 20px;
+  background: #007DFF;
+  border-radius: 100px;
+  text-align: center;
+  font-family: HelveticaNeue-Bold, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 11px;
+  color: #FFFFFF;
+  letter-spacing: 0.4px;
+  padding: 3px 0 4px 0;
+  position: absolute;
+  box-sizing: border-box;
+  margin-left: -24.5px;
+}
+
+.timebar__now::after {
+  content: "";
+  display: block;
+  border-right: 1px solid #007DFF;
+  height: 20px;
+  position: relative;
+  left: -23.5px;
+}
+
+.timebar::before,
+.timebar::after {
+  content: "";
+  display: block;
+  flex: 0 0 auto;
+  height: 100%;
+}
+
+.timebar::before {
+  width: 24.5px;
+}
+
+.timebar::after {
+  width: 41.5px;
+}
+
+.timebar__entry {
+  display: inline-block;
+  height: 13px;
+  width: 49px;
+  text-align: center;
+  font-size: 11px;
+  padding: 17px 0 16px 17px;
+  font-family: HelveticaNeue-Bold, Arial;
+  font-weight: bold;
+  color: #252525;
+  letter-spacing: 0.4px;
+  flex: 0 0 auto;
+}
+
+.timebar__entry.timebar__entry--past {
+  color: #858E98;
+}
