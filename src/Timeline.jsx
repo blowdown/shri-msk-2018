@@ -26,9 +26,10 @@ export default class Timeline extends React.Component {
         ));
 
         const hours = this.state.now.getHours() + this.state.now.getMinutes() / 60;
+        const { onScroll = () => {} } = this.props;
 
         return (
-            <div className="timeline">
+            <div className="timeline" onScroll={e => onScroll(e.target.scrollLeft, e.target.scrollTop)}>
                 <div className="timeline__body">
                     <div className="timeline__ruler-now" style={{ left: hours * 66 + 'px' }}></div>
                     <div className="timeline__rulers">
