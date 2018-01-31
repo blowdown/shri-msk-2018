@@ -1,0 +1,109 @@
+.tooltip {}
+
+.tooltip__body {
+  width: 338px;
+  height: 113px;
+  background: #FFFFFF;
+  box-shadow: 0 1px 16px 0 rgba(0, 44, 92, 0.28);
+  border-radius: 8px;
+  position: relative;
+  left: -169px;
+  padding: 14px 16px;
+  box-sizing: border-box;
+}
+
+.tooltip__tail {
+  position: relative;
+  left: -6px;
+  z-index: 1;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 6px 7.8px 6px;
+  border-color: transparent transparent #ffffff transparent;
+}
+
+.tooltip__edit {
+  width: 24px;
+  height: 24px;
+  background-color: #E9ECEF;
+  border: 0;
+  border-radius: 100%;
+  cursor: pointer;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+.tooltip__edit:focus {
+  outline: none;
+}
+
+.tooltip__edit::before {
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 10.5px;
+  height: 10.5px;
+  content: "";
+  display: block;
+  margin: 0;
+  position: relative;
+  opacity: 0.43;
+  background-image: url(https://yandex-shri-msk-2018.github.io/entrance-task-2/desktop-guide/assets/edit.svg);
+  left: 7.5px;
+}
+
+.tooltip__edit:focus::before,
+.tooltip__edit:hover::before {
+  opacity: 1;
+}
+
+.tooltip__title {
+  font-family: HelveticaNeue-Bold, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+
+.tooltip__description {
+  font-family: HelveticaNeue, Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 17px;
+  margin-top: 2px;
+}
+
+.tooltip__info {
+  line-height: 24px;
+  font-family: Helvetica, Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  letter-spacing: 0;
+  margin-top: 16px;
+}
+
+.tooltip__avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  background-size: cover;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.tooltip__name {
+  display: inline-block;
+  color: #000000;
+  vertical-align: middle;
+}
+
+.tooltip__members {
+  display: inline-block;
+  color: #858E98;
+  vertical-align: middle;
+}

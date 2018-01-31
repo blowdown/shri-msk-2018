@@ -1,0 +1,86 @@
+.date-select {
+  height: 46px;
+  width: 245px;
+  background: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+.date-select__backward,
+.date-select__forward {
+  width: 24px;
+  height: 24px;
+  background-color: #E9ECEF;
+  border: 0;
+  border-radius: 100%;
+  cursor: pointer;
+
+  margin: 0;
+  padding: 0;
+}
+
+.date-select__backward {
+  margin: 11px 0 11px 24px;
+}
+
+.date-select__forward {
+  margin: 11px 24px 11px 0;
+}
+
+.date-select__forward:focus,
+.date-select__backward:focus {
+  outline: none;
+}
+
+.date-select__forward::before,
+.date-select__backward::before {
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 10px;
+  height: 10px;
+  content: "";
+  display: block;
+  margin: 0;
+  position: relative;
+  opacity: 0.43;
+}
+
+.date-select__backward::before {
+  background-image: url(https://yandex-shri-msk-2018.github.io/entrance-task-2/desktop-guide/assets/arrow2.svg);
+  left: 6px;
+}
+
+.date-select__forward::before {
+  background-image: url(https://yandex-shri-msk-2018.github.io/entrance-task-2/desktop-guide/assets/arrow.svg);
+  left: 8px;
+}
+
+.date-select__forward:focus::before,
+.date-select__forward:hover::before,
+.date-select__backward:focus::before,
+.date-select__backward:hover::before {
+  opacity: 1;
+}
+
+.date-select__text {
+  font-family: Arial;
+  font-size: 15px;
+  color: #000000;
+  letter-spacing: 0;
+  font-weight: bold;
+  width: 123px;
+  height: 18px;
+  margin: 13px 12.5px 15px 13.5px;
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.date-select__text:focus,
+.date-select__text:hover {
+  color: #0070E0;
+  outline: none;
+  cursor: pointer;
+}

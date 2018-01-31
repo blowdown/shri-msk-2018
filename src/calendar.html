@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./calendar.css">
+  <link rel="stylesheet" href="./date-select.css">
+  <link rel="stylesheet" href="./button.css">
+  <link rel="stylesheet" href="./header.css">
+  <link rel="stylesheet" href="./timeline.css">
+  <link rel="stylesheet" href="./tooltip.css">
+  <link rel="stylesheet" href="./timebar.css">
+  <link rel="stylesheet" href="./sidebar.css">
+  <style>
+    body,
+    html {
+      margin: 0;
+      height: 100%;
+    }
+  </style>
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      const timeline = document.querySelector('.timeline');
+      const sidebar = document.querySelector('.calendar__sidebar');
+      const time = document.querySelector('.calendar__timebar');
+
+      timeline.addEventListener('scroll', function() {
+        sidebar.scrollTop = timeline.scrollTop;
+        time.scrollLeft = timeline.scrollLeft;
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div class="calendar">
+
+    <div class="calendar__page-header">
+      <div class="header">
+        <button class="button button--primary">Создать встречу</button>
+      </div>
+    </div>
+
+    <div class="calendar__header">
+      <div class="calendar__header-date">
+        <div class="date-select">
+          <button class="date-select__backward"></button>
+          <button class="date-select__text">14 дек · Сегодня</button>
+          <button class="date-select__forward"></button>
+        </div>
+      </div>
+      <div class="calendar__timebar">
+        <div class="timebar">
+          <div class="timebar__now" style="left: 165px;">12:40</div>
+          <div class="timebar__entry timebar__entry--past">1</div>
+          <div class="timebar__entry timebar__entry--past">2</div>
+          <div class="timebar__entry timebar__entry--past">3</div>
+          <div class="timebar__entry">4</div>
+          <div class="timebar__entry">5</div>
+          <div class="timebar__entry">6</div>
+          <div class="timebar__entry">7</div>
+          <div class="timebar__entry">8</div>
+          <div class="timebar__entry">9</div>
+          <div class="timebar__entry">10</div>
+          <div class="timebar__entry">11</div>
+          <div class="timebar__entry">12</div>
+          <div class="timebar__entry">13</div>
+          <div class="timebar__entry">14</div>
+          <div class="timebar__entry">15</div>
+          <div class="timebar__entry">16</div>
+          <div class="timebar__entry">17</div>
+          <div class="timebar__entry">18</div>
+          <div class="timebar__entry">19</div>
+          <div class="timebar__entry">20</div>
+          <div class="timebar__entry">21</div>
+          <div class="timebar__entry">22</div>
+          <div class="timebar__entry">23</div>
+        </div>
+      </div>
+    </div>
+    <div class="calendar__meat">
+      <div class="calendar__sidebar">
+        <div class="sidebar">
+          <div class="sidebar__floor">7 этаж</div>
+          <div class="sidebar__room sidebar__room--selected">
+            <div class="sidebar__room-name">Прачечная</div>
+            <div class="sidebar__room-capacity">до 10 человек</div>
+          </div>
+          <div class="sidebar__room sidebar__room--reserved">
+            <div class="sidebar__room-name">Прачечная</div>
+            <div class="sidebar__room-capacity">до 10 человек</div>
+          </div>
+          <div class="sidebar__room">
+            <div class="sidebar__room-name">Прачечная</div>
+            <div class="sidebar__room-capacity">до 10 человек</div>
+          </div>
+          <div class="sidebar__room">
+            <div class="sidebar__room-name">Прачечная</div>
+            <div class="sidebar__room-capacity">до 10 человек</div>
+          </div>
+          <div class="sidebar__room">
+            <div class="sidebar__room-name">Прачечная</div>
+            <div class="sidebar__room-capacity">до 10 человек</div>
+          </div>
+
+          <div class="sidebar__floor">8 этаж</div>
+          <div class="sidebar__room">
+            <div class="sidebar__room-name">Прачечная</div>
+            <div class="sidebar__room-capacity">до 10 человек</div>
+          </div>
+          <div class="sidebar__room">
+            <div class="sidebar__room-name">Прачечная</div>
+            <div class="sidebar__room-capacity">до 10 человек</div>
+          </div>
+          <div class="sidebar__room">
+            <div class="sidebar__room-name">Прачечная</div>
+            <div class="sidebar__room-capacity">до 10 человек</div>
+          </div>
+          <div class="sidebar__room">
+            <div class="sidebar__room-name">Прачечная</div>
+            <div class="sidebar__room-capacity">до 10 человек</div>
+          </div>
+          <div class="sidebar__room">
+            <div class="sidebar__room-name">Прачечная</div>
+            <div class="sidebar__room-capacity">до 10 человек</div>
+          </div>
+
+          <div class="sidebar__floor">9 этаж</div>
+          <div class="sidebar__room">
+            <div class="sidebar__room-name">Прачечная</div>
+            <div class="sidebar__room-capacity">до 10 человек</div>
+          </div>
+          <div class="sidebar__room">
+            <div class="sidebar__room-name">Прачечная</div>
+            <div class="sidebar__room-capacity">до 10 человек</div>
+          </div>
+          <div class="sidebar__room">
+            <div class="sidebar__room-name">Прачечная</div>
+            <div class="sidebar__room-capacity">до 10 человек</div>
+          </div>
+          <div class="sidebar__room">
+            <div class="sidebar__room-name">Прачечная</div>
+            <div class="sidebar__room-capacity">до 10 человек</div>
+          </div>
+          <div class="sidebar__room">
+            <div class="sidebar__room-name">Прачечная</div>
+            <div class="sidebar__room-capacity">до 10 человек</div>
+          </div>
+        </div>
+      </div>
+      <div class="calendar__timeline">
+        <div class="timeline">
+          <div class="timeline__body">
+            <div class="timeline__ruler-now" style="left: 165px;"></div>
+            <div class="timeline__rulers">
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+              <div class="timeline__ruler"></div>
+            </div>
+            <div class="timeline__rows">
+              <div class="timeline__spacer timeline__spacer--first"></div>
+              <div class="timeline__row">
+                <div class="timeline__meeting" style="width: calc(100% / 24);"></div>
+                <div class="timeline__vacant" style="width: calc(100% / 12)">
+                  <button class="timeline__create-meeting"></button>
+                </div>
+                <div class="timeline__meeting timeline__meeting--pressed" style="width: calc(100% / 24 * 1.5)"></div>
+              </div>
+              <div class="timeline__row"></div>
+              <div class="timeline__row"></div>
+              <div class="timeline__row"></div>
+              <div class="timeline__row"></div>
+
+              <div class="timeline__spacer"></div>
+              <div class="timeline__row"></div>
+              <div class="timeline__row"></div>
+              <div class="timeline__row"></div>
+              <div class="timeline__row"></div>
+              <div class="timeline__row"></div>
+            </div>
+            <div class="timeline__tooltip" style="position: absolute; left: 247.46875px; top: 61px;">
+              <div class="tooltip">
+                <div class="tooltip__tail"></div>
+                <div class="tooltip__body">
+                  <button class="tooltip__edit"></button>
+                  <div class="tooltip__title">Рассуждения о высоком</div>
+                  <div class="tooltip__description">14 декабря, 15:00—17:00 · Жёлтый дом</div>
+                  <div class="tooltip__info">
+                    <div class="tooltip__avatar" style="background-image: url(https://randomuser.me/api/portraits/women/56.jpg);"></div>
+                    <div class="tooltip__name">Дарт Вейдер</div>
+                    <div class="tooltip__members">и 12 участников</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

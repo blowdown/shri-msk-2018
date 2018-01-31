@@ -1,0 +1,56 @@
+.sidebar {
+  width: 245px;
+  border-right: 1px solid #E9ECEF;
+  padding-left: 25px;
+  box-sizing: border-box;
+}
+
+.sidebar::before {
+  height: 2px;
+  display: block;
+  content: "";
+}
+
+.sidebar__floor {
+  text-transform: uppercase;
+  font-family: HelveticaNeue-Bold, Arial;
+  font-weight: bold;
+  font-size: 11px;
+  color: #858E98;
+  letter-spacing: 0.4px;
+  margin-top: 20px;
+  margin-bottom: 4px;
+}
+
+.sidebar__room {
+  height: 44px;
+  padding: 4px 0;
+  box-sizing: border-box;
+  color: #000000;
+}
+
+.sidebar__room-name {
+  font-family: HelveticaNeue-Medium, Arial;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 17px;
+  margin-bottom: 2px;
+}
+
+.sidebar__room-capacity {
+  font-family: HelveticaNeue, Arial;
+  font-size: 13px;
+  line-height: 17px;
+}
+
+.sidebar__room+.sidebar__room {
+  margin-top: 8px;
+}
+
+.sidebar__room--selected>.sidebar__room-name {
+  color: #0070E0;
+}
+
+.sidebar__room--reserved {
+  color: #858E98;
+}

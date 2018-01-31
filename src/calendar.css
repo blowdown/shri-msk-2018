@@ -1,0 +1,52 @@
+.calendar {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.calendar__page-header {
+  flex: 0 0 auto;
+}
+
+.calendar__meat {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.calendar__timeline {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  flex: 1 1 auto;
+  /* Make sure timeline has fixed length. Probably, dunno what the hell. */
+  width: 0px;
+}
+
+.calendar__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 46px;
+  flex: 0 0 auto;
+  border-bottom: 1px solid #E9ECEF;
+}
+
+.calendar__header-date {
+  flex: 0 0 auto;
+}
+
+.calendar__timebar {
+  flex: 1 1 auto;
+  overflow: hidden;
+}
+
+.calendar__sidebar {
+  flex: 0 0 auto;
+  overflow-y: hidden;
+}
