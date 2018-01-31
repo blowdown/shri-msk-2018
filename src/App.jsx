@@ -1,8 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Modal from './Modal';
 import Meeting from './Meeting';
 import Button from './Button';
+import Calendar from './Calendar';
 
 const members = [
     { id: 1, login: 'Лекс Лютер', homeFloor: 11, avatarUrl: 'https://randomuser.me/api/portraits/men/1.jpg' },
@@ -45,9 +45,7 @@ export default class App extends React.Component {
         }
 
         return <React.Fragment>
-            <Button onClick={() => this.setState({ location: 'meeting-creation' })}>
-                create meeting
-            </Button>
+            <Calendar rooms={rooms} />
             {this.state.location !== 'index-meeting-created' ? null :
                 <Modal icon="success" title="Встреча создана!" description={'14 декабря, 15:00—17:00\nГотем · 4 этаж'}>
                     <Button primary={true} onClick={() => this.setState({ location: 'index' })}>Хорошо</Button>
