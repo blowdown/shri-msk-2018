@@ -29,7 +29,7 @@ export default class Calendar extends React.Component {
             <div className="calendar">
                 <div className="calendar__page-header">
                     <Header>
-                        <Button primary>
+                        <Button primary onClick={this.props.onCreateMeeting}>
                             Создать встречу
                         </Button>
                     </Header>

@@ -45,7 +45,9 @@ export default class App extends React.Component {
         }
 
         return <React.Fragment>
-            <Calendar rooms={rooms} />
+            <Calendar rooms={rooms} 
+                onCreateMeeting={() => this.setState({ location: 'meeting-creation' })}
+            />
             {this.state.location !== 'index-meeting-created' ? null :
                 <Modal icon="success" title="Встреча создана!" description={'14 декабря, 15:00—17:00\nГотем · 4 этаж'}>
                     <Button primary={true} onClick={() => this.setState({ location: 'index' })}>Хорошо</Button>
